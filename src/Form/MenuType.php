@@ -2,27 +2,30 @@
 
 namespace App\Form;
 
-use App\Entity\Pizza;
+use App\Entity\Menu;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PizzaType extends AbstractType
+class MenuType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name_pizza')
-            ->add('desc_pizza')
-            ->add('price_pizza')
-            ->add('img_pizza')
+            ->add('name_menu')
+            ->add('desc_menu')
+            ->add('img_menu')
+            ->add('qtx_cart')
+            ->add('prix_menu')
+            ->add('qtx_drink')
+            ->add('pizzas')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Pizza::class,
+            'data_class' => Menu::class,
         ]);
     }
 }

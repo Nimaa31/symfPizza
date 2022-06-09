@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MenuFormController!{% endblock %}
+
+{% block body %}
+{{ form_start(form) }}
+{{ form_label(form.name_menu) }}
+{{ form_widget(form.name_menu) }}
+{{ form_label(form.desc_menu) }}
+{{ form_widget(form.desc_menu) }}
+{{ form_label(form.img_menu) }}
+{{ form_widget(form.img_menu) }}
+{{ form_label(form.qtx_cart) }}
+{{ form_widget(form.qtx_cart) }}
+{{ form_label(form.prix_menu) }}
+{{ form_widget(form.prix_menu) }}
+{{ form_label(form.qtx_drink) }}
+{{ form_widget(form.qtx_drink) }}
+{{ form_rest(form) }}
+ <button type="submit">Enregistrer</button>
+ {{ form_end(form) }}
+{% endblock %}

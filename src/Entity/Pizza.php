@@ -15,7 +15,7 @@ class Pizza
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[ORM\Column(type: 'string', length: 255, nullable: false)]
     private $name_pizza;
 
     #[ORM\Column(type: 'text', nullable: true)]
@@ -54,7 +54,7 @@ class Pizza
         return $this->id;
     }
 
-    public function getNamePizza(): ?string
+    public function getNamePizza(): string
     {
         return $this->name_pizza;
     }
@@ -196,5 +196,9 @@ class Pizza
         $this->carts->removeElement($cart);
 
         return $this;
+    }
+    public function __toString() 
+    {
+        return $this->name_pizza;
     }
 }
