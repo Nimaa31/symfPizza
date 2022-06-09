@@ -23,37 +23,27 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Accueil
+          <a class="nav-link active" href="{{ path('app_home')}}">Accueil
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Ingredients</a>
+          <a class="nav-link" href="{{ path('app_ingredient')}}">Ingredients</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pizzas</a>
+          <a class="nav-link" href="{{ path('app_pizza')}}">Pizzas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">Pizza Custom</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Boissons</a>
+          <a class="nav-link" href="{{ path('app_show_drink')}}">Boissons</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inscription/connexion</a>
+          <a class="nav-link" href="{{ path('app_inscription')}}">Inscription/connexion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Panier</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
+          <a class="nav-link" href="{{path('app_panier')}}">Panier</a>
         </li>
       </ul>
       {# <form class="d-flex">
