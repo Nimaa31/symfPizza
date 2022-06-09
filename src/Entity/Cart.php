@@ -15,6 +15,14 @@ class Cart
     #[ORM\Column(type: 'integer')]
     private $id;
 
+
+    #[ORM\Column(type: 'integer', nullable: true)]
+    private $qtx_drink;
+    #[ORM\Column(type: 'integer', nullable: true)]
+    private $qtx_pizza;
+    #[ORM\Column(type: 'integer', nullable: true)]
+    private $qtx_menu;
+
     #[ORM\Column(type: 'datetime', nullable: true)]
     private $date_cart;
 
@@ -143,4 +151,44 @@ class Cart
 
         return $this;
     }
+
+
+    public function getQtxDrink(): ?int
+    {
+        return $this->qtx_drink;
+    }
+
+    public function setQtxDrink(?int $qtx_drink): self
+    {
+        $this->qtx_drink = $qtx_drink;
+
+        return $this;
+    }
+
+
+    public function getQtxPizza(): ?int
+    {
+        return $this->qtx_pizza;
+    }
+
+    public function setQtxPizza(?int $qtx_pizza): self
+    {
+        $this->qtx_pizza = $qtx_pizza;
+
+        return $this;
+    }
+
+
+    public function getQtxMenu(): ?int
+    {
+        return $this->qtx_menu;
+    }
+
+    public function setQtxMenu(?int $qtx_menu): self
+    {
+        $this->qtx_menu = $qtx_menu;
+
+        return $this;
+    }
+
 }
