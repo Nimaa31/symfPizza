@@ -24,10 +24,10 @@ class Cart
     #[ORM\ManyToMany(targetEntity: Menu::class, mappedBy: 'cart')]
     private $menus;
 
-    #[ORM\ManyToOne(targetEntity: user::class, inversedBy: 'carts')]
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'carts')]
     private $util;
 
-    #[ORM\ManyToMany(targetEntity: drink::class, inversedBy: 'carts')]
+    #[ORM\ManyToMany(targetEntity: Drink::class, inversedBy: 'carts')]
     private $drinks;
 
     public function __construct()
@@ -89,7 +89,7 @@ class Cart
         return $this->menus;
     }
 
-    public function addMenu(Menu $menu): self
+    public function addMenu(Menu $enu): self
     {
         if (!$this->menus->contains($menu)) {
             $this->menus[] = $menu;
@@ -108,12 +108,12 @@ class Cart
         return $this;
     }
 
-    public function getUtil(): ?user
+    public function getUtil(): ?User
     {
         return $this->util;
     }
 
-    public function setUtil(?user $util): self
+    public function setUtil(?User $util): self
     {
         $this->util = $util;
 
@@ -128,7 +128,7 @@ class Cart
         return $this->drinks;
     }
 
-    public function addDrink(drink $drink): self
+    public function addDrink(Drink $drink): self
     {
         if (!$this->drinks->contains($drink)) {
             $this->drinks[] = $drink;
@@ -137,7 +137,7 @@ class Cart
         return $this;
     }
 
-    public function removeDrink(drink $drink): self
+    public function removeDrink(Drink $drink): self
     {
         $this->drinks->removeElement($drink);
 
