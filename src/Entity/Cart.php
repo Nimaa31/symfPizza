@@ -89,7 +89,7 @@ class Cart
         return $this->menus;
     }
 
-    public function addMenu(Menu $menu): self
+    public function addMenu(Menu $enu): self
     {
         if (!$this->menus->contains($menu)) {
             $this->menus[] = $menu;

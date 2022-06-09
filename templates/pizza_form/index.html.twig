@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PizzaFormController!{% endblock %}
+
+{% block body %}
+ {{ form_start(form) }}
+ {{ form_label(form.name_pizza) }}
+ {{ form_widget(form.name_pizza) }} <br>
+{{ form_label(form.desc_pizza) }}
+ {{ form_widget(form.desc_pizza) }}<br>
+ {{ form_label(form.price_pizza) }}
+ {{ form_widget(form.price_pizza) }}<br>
+ {{ form_label(form.img_pizza) }}
+ {{ form_widget(form.img_pizza) }}<br>
+  {{ form_label(form.qtx_cart) }}
+ {{ form_widget(form.qtx_cart) }}<br>
+   {{ form_label(form.qtx_menu) }}
+ {{ form_widget(form.qtx_menu) }}<br>
+   {{ form_label(form.ingredients) }}
+ {{ form_widget(form.ingredients) }}
+   {{ form_label(form.menus) }}
+ {{ form_widget(form.menus) }}
+   {{ form_label(form.carts) }}
+ {{ form_widget(form.carts) }}
+ {{ form_rest(form) }}
+ <button type="submit">Enregistrer</button>
+ {{ form_end(form) }}
+
+{% endblock %}

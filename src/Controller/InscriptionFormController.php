@@ -25,7 +25,7 @@ class InscriptionFormController extends AbstractController
             $entityManagerInterface->flush();
         }
 
-        return $this->render('inscription_for/index.html.twig', [
+        return $this->render('inscription_form/index.html.twig', [
             'form' => $form->createView()
         ]);
     }

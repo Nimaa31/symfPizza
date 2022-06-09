@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Pizza{% endblock %}
+
+{% block body %}
+ <div class='d-flex flex-wrap justify-content-around'>
+{% for Pizza in pizza %}
+<div class="card m-3 w-25 h-50">
+  <h3 class="card-header">{{Pizza.namePizza}}</h3>
+  <div class="card-body">
+    <h5 class="card-title">Description :</h5>
+    <h6 class="card-subtitle text-muted">{{Pizza.descPizza}}</h6>
+  </div>
+  <img class="fit-picture" src="{{Pizza.imgPizza}}" height: 150px; width: 150px; alt="photo de {{Pizza.namePizza}}">
+  <div class="card-body">
+    <p class="card-text">Quantité Menu : {{Pizza.qtxMenu}}</p>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Prix : {{Pizza.pricePizza}} €</p>
+  </div>
+  {# <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> #}
+  <div class="card-footer ">
+    Ingredients;
+  </div>
+    <div class="card-body">
+     <button type="submit">Ajouter au panier</button>
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
