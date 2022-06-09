@@ -36,10 +36,10 @@ class Pizza
     #[ORM\ManyToMany(targetEntity: Ingredient::class, inversedBy: 'pizzas')]
     private $ingredients;
 
-    #[ORM\ManyToMany(targetEntity: menu::class, inversedBy: 'pizzas')]
+    #[ORM\ManyToMany(targetEntity: Menu::class, inversedBy: 'pizzas')]
     private $menus;
 
-    #[ORM\ManyToMany(targetEntity: cart::class, inversedBy: 'pizzas')]
+    #[ORM\ManyToMany(targetEntity: Cart::class, inversedBy: 'pizzas')]
     private $carts;
 
     public function __construct()

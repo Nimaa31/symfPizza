@@ -24,10 +24,10 @@ class Cart
     #[ORM\ManyToMany(targetEntity: Menu::class, mappedBy: 'cart')]
     private $menus;
 
-    #[ORM\ManyToOne(targetEntity: user::class, inversedBy: 'carts')]
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'carts')]
     private $util;
 
-    #[ORM\ManyToMany(targetEntity: drink::class, inversedBy: 'carts')]
+    #[ORM\ManyToMany(targetEntity: Drink::class, inversedBy: 'carts')]
     private $drinks;
 
     public function __construct()
