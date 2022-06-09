@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ShowDrinkController!{% endblock %}
+
+{% block body %}
+<h6 class="card-subtitle text-muted">Nos Boissons</h6>
+<div class='d-flex flex-wrap justify-content-around'>
+{% for drink in drink %}
+
+    <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+    <div class="card-header">{{ drink.nameDrink }}</div>
+    <div class="card-header"> <img src="{{ drink.imgDrink }}" style="width:100%">
+    <div class="card-body">
+        <h4 class="card-title">{{ drink.priceDrink }}</h4>
+        <p class="card-text">{{ drink.descDrink }}</p>
+    </div>
+    </div>
+        </div>
+
+
+    {% endfor %}
+    </div>
+{% endblock %}
+
+

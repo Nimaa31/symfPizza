@@ -161,7 +161,7 @@ class Menu
         return $this->drinks;
     }
 
-    public function addDrink(drink $drink): self
+    public function addDrink(Drink $drink): self
     {
         if (!$this->drinks->contains($drink)) {
             $this->drinks[] = $drink;
@@ -170,7 +170,7 @@ class Menu
         return $this;
     }
 
-    public function removeDrink(drink $drink): self
+    public function removeDrink(Drink $drink): self
     {
         $this->drinks->removeElement($drink);
 
@@ -185,7 +185,7 @@ class Menu
         return $this->cart;
     }
 
-    public function addCart(cart $cart): self
+    public function addCart(Cart $cart): self
     {
         if (!$this->cart->contains($cart)) {
             $this->cart[] = $cart;
@@ -194,7 +194,7 @@ class Menu
         return $this;
     }
 
-    public function removeCart(cart $cart): self
+    public function removeCart(Cart $cart): self
     {
         $this->cart->removeElement($cart);
 
