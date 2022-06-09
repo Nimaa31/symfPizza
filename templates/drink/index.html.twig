@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DrinkController!{% endblock %}
+
+
+{% block body %}
+    {{ form_start(form) }}
+        {{ form_label(form.name_drink) }}
+        {{ form_widget(form.name_drink) }}
+        <br> <br>
+        {{ form_label(form.price_drink) }}
+        {{ form_widget(form.price_drink) }}
+        <br> <br>
+        {{ form_label(form.desc_drink) }}
+        {{ form_widget(form.desc_drink) }}
+        <br> <br>
+        {{ form_label(form.img_drink) }}
+        {{ form_widget(form.img_drink) }}
+        <br> <br>
+        {{ form_label(form.qtx_cart) }}
+        {{ form_widget(form.qtx_cart) }}
+        <br> <br>
+        {{ form_label(form.menus) }}
+        {{ form_widget(form.menus) }}
+        <br> <br>
+        {{ form_label(form.carts) }}
+        {{ form_widget(form.carts) }}
+        <hr> <br>
+        {{ form_rest(form) }}
+        <button type="submit">Enregistrer</button>
+    {{ form_end(form) }}
+{% endblock %}

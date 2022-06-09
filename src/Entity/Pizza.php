@@ -36,10 +36,10 @@ class Pizza
     #[ORM\ManyToMany(targetEntity: Ingredient::class, inversedBy: 'pizzas')]
     private $ingredients;
 
-    #[ORM\ManyToMany(targetEntity: menu::class, inversedBy: 'pizzas')]
+    #[ORM\ManyToMany(targetEntity: Menu::class, inversedBy: 'pizzas')]
     private $menus;
 
-    #[ORM\ManyToMany(targetEntity: cart::class, inversedBy: 'pizzas')]
+    #[ORM\ManyToMany(targetEntity: Cart::class, inversedBy: 'pizzas')]
     private $carts;
 
     public function __construct()
@@ -158,7 +158,7 @@ class Pizza
         return $this->menus;
     }
 
-    public function addMenu(menu $menu): self
+    public function addMenu(Menu $menu): self
     {
         if (!$this->menus->contains($menu)) {
             $this->menus[] = $menu;
@@ -167,7 +167,7 @@ class Pizza
         return $this;
     }
 
-    public function removeMenu(menu $menu): self
+    public function removeMenu(Menu $menu): self
     {
         $this->menus->removeElement($menu);
 
@@ -182,7 +182,7 @@ class Pizza
         return $this->carts;
     }
 
-    public function addCart(cart $cart): self
+    public function addCart(Cart $cart): self
     {
         if (!$this->carts->contains($cart)) {
             $this->carts[] = $cart;
@@ -191,7 +191,7 @@ class Pizza
         return $this;
     }
 
-    public function removeCart(cart $cart): self
+    public function removeCart(Cart $cart): self
     {
         $this->carts->removeElement($cart);
 
